@@ -10,19 +10,25 @@ use Illuminate\Support\Facades\Log;
 
 class UsersController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auath', ['except' => ['show']]);
+    }
+
     public function show(User $user)
     {
-//        echo 1;exit;
         return view('users.show', compact('user'));
     }
 
     public function edit(User $user)
     {
+        $this->authorize('update', $user);
         return view('users.edit', compact('user'));
     }
 
     public function update(UserRequest $request, User $user)
     {
+        $this->authorize('update', $user);
         $data = $request->all();
         if ($request->avatar) {
             $result = Upload::save($request->avatar, 419);
