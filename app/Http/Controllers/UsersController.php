@@ -1,0 +1,25 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+use App\Models\User;
+
+class UsersController extends Controller
+{
+    public function show(User $user)
+    {
+//        echo 1;exit;
+        return view('users.show', compact('user'));
+    }
+
+    public function edit()
+    {
+
+    }
+
+    public function update()
+    {
+
+    }
+}
