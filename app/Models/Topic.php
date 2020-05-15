@@ -7,7 +7,6 @@ use App\Observers\TopicObserver;
 
 class Topic extends Model
 {
-//    use Notifiable;
 
     protected $fillable = [
         'title',
