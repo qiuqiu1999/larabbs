@@ -18,7 +18,7 @@ class Upload
 
         $this->checkType();
         $fileName = time() . uniqid() . '.' . $this->fileType;
-        $savePath = 'public/uploads/' . date('Y') . '/'. date('m') . '/' . date('d');
+        $savePath = 'uploads/' . date('Y') . '/'. date('m') . '/' . date('d');
 
         if ($result = $file->move($savePath, $fileName)) {
             if ($max_width && $this->fileType != 'gif') {
