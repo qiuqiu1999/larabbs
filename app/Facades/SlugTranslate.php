@@ -7,15 +7,15 @@ namespace App\Facades;
 use Illuminate\Support\Facades\Facade;
 
 /**
- * @method static array|bool save($file, $max_width = false)
+ * @method static string translate(string $text)
  *
- * Class UploadFacade
+ * Class SlugTranslate
  * @package App\Facades
  */
-class Upload extends Facade
+class SlugTranslate extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return \App\Lib\Upload::class;
+        return \App\Lib\SlugTranslate::class;
     }
 }
