@@ -20,6 +20,11 @@ class Upload
         $fileName = time() . uniqid() . '.' . $this->fileType;
         $savePath = 'uploads/' . date('Y') . '/'. date('m') . '/' . date('d');
 
+//        echo public_path(). $savePath;exit;
+//        if (!is_dir(public_path(). $savePath)) {
+//            mkdir(public_path(). $savePath, 0777, true);
+//        }
+
         if ($result = $file->move($savePath, $fileName)) {
             if ($max_width && $this->fileType != 'gif') {
                 // 此类中封装的函数，用于裁剪图片
