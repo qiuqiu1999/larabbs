@@ -1,4 +1,4 @@
-{{--@include('shared._error')--}}
+@include('shared._error')
 
 <div class="reply-box">
     <form action="{{ route('replies.store') }}" method="POST" accept-charset="UTF-8">
