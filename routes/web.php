@@ -11,6 +11,11 @@
 |
 */
 
+
+
+Route::get('/phpinfo', 'TestController@phpinfo');
+
+
 Route::get('/', 'PagesController@root')->name('root');
 
 
